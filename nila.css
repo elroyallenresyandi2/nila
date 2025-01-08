@@ -1,0 +1,128 @@
+*, html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #2A3335;
+    text-align: left;
+   
+}
+
+nav {
+    background-color: #3E5879;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 4rem;
+}
+nav div img {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    margin:auto;
+
+
+}
+nav ul li a {
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:#2A3335;
+    font-weight: 600;
+}
+
+.animated-text{
+    margin: 0;
+    padding: 0;
+    background-color:#2A3335;
+    color: azure;
+    height: 100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'montserrat', sans-serif;
+    font-size: 50px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.animated-text span{
+    position: relative;
+}
+.animated-text span::before{
+
+    content: "to nila kekar";
+    color: #074799;
+    animation: words .20s infinite;
+}
+
+.animated-text span::after{
+    content:"";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    background-color: #2A3335;  
+    border-left: 2px solid #074799;
+    right: -8px;
+animation: cursor .8s infinite, typing 20s steps(14) infinite; 
+
+}
+.menu-icon {
+
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+}
+
+@media only screen and (max-width: 768px) {
+    nav ul {
+        display: none; 
+    }
+}
+
+
+@keyframes cursor {
+    to{
+        border-left: 2px solid #07479900;
+    }
+}
+
+@keyframes words {
+    0%,50%{
+        content: "to nila kekar"
+    }
+}
+
+@keyframes typing {
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+        width: 0;
+
+    }
+    5%,20%,25%,40%,45%,60%,65%,80%,85%{
+        width: calc(100% + 8px);
+    }
+    
+}
+
+
+
+.isi-isi {
+    margin-top: 150px;
+    display: flex;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    align-items: left;
+    font-weight: 200px;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 25px;
+}
+
+
+
